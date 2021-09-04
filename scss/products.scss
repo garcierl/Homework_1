@@ -1,0 +1,237 @@
+.products {
+  background-color: skyblue;
+  height: fit-content;
+}
+.container1 {
+  max-width: 1000px;
+  max-height: 450px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.container2 {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+}
+
+.container3 {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+}
+
+/*columns*/
+.left-column {
+  float: left;
+  width: 65%;
+  margin-top: 80px;
+  position: relative;
+}
+
+.right-column {
+  float: right;
+  width: 35%;
+  margin-top: 60px;
+  height: 450px;
+}
+
+//left-column
+.left-column img {
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 100;
+  transition: all 0.3s ease;
+}
+
+.left-column img.active {
+  opacity: 1;
+}
+
+//right-column
+.product-description {
+  border-bottom: 1px solid #000;
+  margin-bottom: 20px;
+
+  &_span {
+    font-size: 12px;
+    color: #000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &_h3 {
+    font-weight: 300;
+    font-size: 34px;
+    color: #000;
+    letter-spacing: -2px;
+  }
+
+  &_p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #000;
+    line-height: 24px;
+  }
+}
+//color section
+.product-color {
+  margin-bottom: 30px;
+}
+
+.color-choose div {
+  display: inline-block;
+}
+
+.color-choose input[type="&amp;quot;radio&amp;quot;"] {
+  display: none;
+}
+
+.color-choose input[type="&amp;quot;radio&amp;quot;"] + label span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.color-choose input[type="&amp;quot;radio&amp;quot;"] + label span {
+  border: 2px solid #000;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+}
+
+.color-choose input[type="&amp;quot;radio&amp;quot;"]#white + label span {
+  background-color: #fff;
+}
+
+.color-choose input[type="&amp;quot;radio&amp;quot;"]#black + label span {
+  background-color: #000;
+}
+
+.color-choose input[type="&amp;quot;radio&amp;quot;"]#red + label span {
+  background-color: red;
+}
+
+.color-choose input[type="&amp;quot;radio&amp;quot;"]#blue + label span {
+  background-color: blue;
+}
+
+//product price
+.product--price {
+  display: flex;
+  align-items: center;
+}
+
+.product--price span {
+  font-size: 26px;
+  font-weight: 300;
+  color: grey;
+  margin-right: 20px;
+}
+
+.cart-btn {
+  display: inline-block;
+  background-color: darkblue;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all 0.5s;
+}
+
+.cart-btn:hover {
+  background-color: darkcyan;
+}
+
+//responsive
+@media (max-width: 940px) {
+  .container1 {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .container2 {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .container3 {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .left-column img {
+    width: 300px;
+    right: 0;
+    top: -65px;
+    left: initial;
+  }
+}
+
+@media (max-width: 535px) {
+  .left-column img {
+    width: 220px;
+    top: -85px;
+  }
+}
+
+//payment plans
+.payment {
+  background-color: skyblue;
+  height: fit-content;
+
+  h2 {
+    margin-left: 38%;
+    align-items: center;
+    font-size: 55px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+  }
+  &--div {
+    padding-top: 35px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    font-size: 30px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  &--info {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+  }
+
+  &--btn {
+    display: inline-block;
+    background-color: darkblue;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all 0.5s;
+    margin-bottom: 25px;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
